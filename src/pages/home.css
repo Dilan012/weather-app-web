@@ -1,48 +1,45 @@
-
+body{
+    background-color: rgb(39, 39, 39);
+}
 
 .grid-container {
     display: flex; /* Use Flexbox for layout */
     flex-wrap: wrap; /* Allow items to wrap */
-    gap: 6%; /* Adjust gap between grid items */
+    gap: 2%; /* Adjust gap between grid items */
     height: 100vh; /* Take full height of the viewport */ 
-   /* overflow: hidden; /* Prevent scrolling of the entire container */
-
-   justify-content: flex-end 
+    overflow: hidden; /* Prevent scrolling of the entire container */
+    justify-content: flex-end; 
+    padding: 1%;
+    transform-origin: top left; /* zoom scalling effect*/
   
 }
-
-
-
 .current-component{
-    width: 30%; 
+    width: 66%; 
     height: 50%; 
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     padding: 20px;
     box-sizing: border-box; /* Include padding and border in the height */
+    overflow: auto;
+    
 }
-
-
 
 .day-component{
     
-    width: 64%; 
-    height: 50%; 
+    width: 32%; 
+    height: 45%; 
     background-color: aqua;
     border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 2px 4px rgba(143, 136, 136, 0.9);
     padding: 20px;
     box-sizing: border-box; /* Include padding and border in the height */
     overflow: auto;
-   
-    
 }
-
 .map-component{
     
     width: 44%; 
-    height: 50%; 
+    height: 45%; 
     background-color: aqua;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
@@ -50,12 +47,10 @@
     box-sizing: border-box; /* Include padding and border in the height */
     overflow: auto;
     transform: rotate(-2deg);
-    
 }
-
 .history-component{
-    width: 50%; 
-    height: 50%; 
+    width: 54%; 
+    height:45%; 
     background-color: aqua;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);

@@ -1,15 +1,15 @@
 
 
 import './current.css'
+import ItemSet from './weather_attributes/set/itemSet';
+
 
 function Current(){
 
     return (
-        <>
-            <div className='current-back'>
-            <p>hellow</p>
-            </div>
-        </>
+        <div className='block'>
+           <ItemSet/>
+        </div>
     );
 }
 

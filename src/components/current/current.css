@@ -1,8 +1,16 @@
 
-.current-back{
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2%;
+    height: 100%;
+    padding: 1%;
     background-color: rgb(73, 91, 122);
+
 }
 
-.current-back:hover{
-    background-color: blue;
+.block{
+    height: 100%;
 }
+
+

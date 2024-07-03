@@ -1,0 +1,36 @@
+
+
+.grid-container-itemset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    height: auto; /* Allow height to adjust based on content */
+    width: 50%;
+    height: auto;
+    min-height: 100%;
+    padding: 1%;
+    background-color: rgb(73, 91, 122);
+    justify-content: flex-start; /* Adjust alignment as needed */
+}
+
+.block {
+    height: 100%; 
+    
+   
+}
+
+.item {
+    width: 30%; /* Adjust as needed */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #b93030;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    padding: 10px; /* Adjust padding to reduce overall size */
+    box-sizing: border-box; /* Include padding and border in the height */
+    overflow: hidden; /* Prevent overflow with hidden content */
+    margin: 1%; /* Adjust margin as needed */
+    min-width: 80px
+}
+
+
+
