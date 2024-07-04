@@ -10,11 +10,13 @@
     min-height: 100%;
     padding: 1%;
     background-color: rgb(73, 91, 122);
-    justify-content: flex-start; /* Adjust alignment as needed */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .block {
     height: 100%; 
+    
     
    
 }
@@ -31,6 +33,23 @@
     margin: 1%; /* Adjust margin as needed */
     min-width: 80px
 }
+
+@media (max-width: 1800px) {
+    .item {
+        width: 50%; /* Adjust width for smaller screens */
+        height: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .item {
+        width: 100%; /* Stack items vertically on smaller screens */
+        margin: 5px 0; /* Adjust margins for stacking */
+        
+    }
+}
+
+
 
 
 
