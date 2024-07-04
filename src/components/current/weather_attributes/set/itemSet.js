@@ -14,27 +14,27 @@ export default function ItemSet(){
             <div className='grid-container-itemset'>
 
                 <div className='item'>
-                    <Item img={pressure} />
+                    <Item img={pressure} value="50.36" description="Pressure" />
                 </div>
 
                 <div className='item'>
-                    <Item img={humidity}/>
+                    <Item img={humidity} value="3.21" description="Humidity"/>
                 </div>
 
                 <div className='item'>
-                    <Item img={feel}/>
+                    <Item img={feel} value="37&deg;C" description="Feel like"/>
                 </div>
 
                 <div className='item'>
-                    <Item img= {thermometer}/>
+                    <Item img= {thermometer} value="35&deg;C" description="Temperature"/>
                 </div>
                 
                 <div className='item'>
-                    <Item img= {uv} />
+                    <Item img= {uv} value="56.362" description="UV" />
                 </div>
                
                 <div className='item'>
-                    <Item img= {wind} />
+                    <Item img= {wind} value="37Kmph" description="Wind"/>
                </div>
 
             </div>

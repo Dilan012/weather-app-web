@@ -9,8 +9,8 @@ export default function Item(props){
             <img src={props.img} alt="Weather Icon" />
           </div>
           <div className="text-container">
-            <h2 className="value">Value</h2>
-            <span className="value">Description</span>
+            <h2 className="value">{props.value}</h2>
+            <span className="value">{props.description}</span>
           </div>
         </div>
     )

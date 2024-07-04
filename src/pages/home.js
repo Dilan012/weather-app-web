@@ -8,25 +8,29 @@ import React, { useState, useEffect } from 'react';
 function Home(){
 
 
-    const [zoomLevel, setZoomLevel] = useState(1);
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [transformEnabled, setTransformEnabled] = useState(true);
 
-    const handleWheel = (e) => {
-      if (e.ctrlKey) {
-        e.preventDefault();
-        const zoomChange = e.deltaY > 0 ? -0.1 : 0.1;
-        setZoomLevel(prevZoom => Math.max(0.5, Math.min(prevZoom + zoomChange, 2))); // Zoom level between 0.5 and 2
-      }
-    };
-  
-    useEffect(() => {
-      window.addEventListener('wheel', handleWheel);
-      return () => window.removeEventListener('wheel', handleWheel);
-    }, []);
+  const handleWheel = (e) => {
+    if (e.ctrlKey) {
+      e.preventDefault();
+      const zoomChange = e.deltaY > 0 ? -0.1 : 0.1;
+      const newZoomLevel = Math.max(0.5, Math.min(zoomLevel + zoomChange, 2));
+      setZoomLevel(newZoomLevel);
+      setTransformEnabled(newZoomLevel <= 1.0); // Disable transform after zoom level 1.5
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleWheel);
+    return () => window.removeEventListener('wheel', handleWheel);
+  }, [zoomLevel]);
+
 
 
 
 return(
-    <div className="grid-container" style={{ transform: `scale(${zoomLevel})`}}>
+    <div className="grid-container" style={transformEnabled ? { transform: `scale(${zoomLevel})` } : {}}>
 
 
         <div className="day-component">
