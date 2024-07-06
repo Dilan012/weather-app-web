@@ -4,13 +4,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1%;
-    height: auto; /* Allow height to adjust based on content */
+    height: 100%; 
     width: 50%;
-    min-height: 100%;
-    padding: 1%;
-    background-color: rgb(73, 91, 122);
+    min-height: 90%;
+   
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
+    box-sizing: border-box;
 }
 
 .block {
@@ -20,28 +20,30 @@
 
 .item {
     width: 30%; 
-    height: auto; /* Allow height to adjust based on content */
-    background-color: #b93030;
-    border-radius: 30px;
+    /*background-color: rgb(75, 93, 121);*/
+    background-color: #808080;
+    
+    border-radius: 20%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-    padding: 10px; /* Adjust padding to reduce overall size */
+    padding: 4px; /* Adjust padding to reduce overall size */
     box-sizing: border-box; /* Include padding and border in the height */
     overflow: hidden; /* Prevent overflow with hidden content */
     margin: 1%; /* Adjust margin as needed */
-    min-width: 80px
+    min-width:80px;
 }
 
 @media (max-width: 1500px) {
     .item {
         width: 45%; /* Adjust width for smaller screens */
         height: auto;
+        
     }
 }
 
 @media (max-width: 900px) {
     .item {
-        width: 30%; /* Stack items vertically on smaller screens */
-        margin: 5px 0 /* Adjust margins for stacking */
+        width: 45%; /* Stack items vertically on smaller screens */
+        margin: 2% /* Adjust margins for stacking */
         
         
     }

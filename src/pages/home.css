@@ -1,9 +1,9 @@
 body{
     background-color: rgb(105, 40, 158);
     overflow-x: hidden;
-    width: 100wh;
-    height: 100vh;
-   
+    box-sizing: border-box;
+    background-color: #404040;
+  
   
 }
 
@@ -15,19 +15,25 @@ body{
     justify-content: center;
     align-items: center; 
     padding: 1%;
-    width: 100%;
-   
-    transform-origin: center; /* zoom scalling effect*/
+    width: 99%;
+    box-sizing: border-box;
+    background-color: #404040;
+  
 }
+    
+   
+   
+    
+
 .current-component{
     width: 66%; 
     height: 45%; 
-    background-color: #ffffff;
+    background-color: #606060;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     padding: 20px;
     box-sizing: border-box; /* Include padding and border in the height */
-    overflow: auto;
+
     
 }
 
@@ -78,6 +84,7 @@ body{
         width: 100%;
         height:auto;
         transform: rotate(0deg);
+        
     }
     .grid-container{
         transform: none;
@@ -85,3 +92,31 @@ body{
    
  
 }
+
+@media (min-width: 1800px) {   
+    
+    .grid-container{
+        transform: scale(0.8);
+       
+    }
+}
+
+@media (min-width: 2200px) {
+   
+    .grid-container{
+        transform: scale(0.6);
+    }
+   
+}
+
+@media (min-width: 2600px) {   
+    
+    .grid-container{
+        transform: scale(0.4);
+    }
+   
+}
+
+
+
+

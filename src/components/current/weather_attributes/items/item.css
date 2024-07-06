@@ -18,13 +18,11 @@ img {
 
 .block{
     height: 100%;
+    box-sizing: border-box;
     
 }
 
 
-.image-container-item:hover{
-    background-color: aqua;
-}
 
 .text-container{
     height: 60%;
@@ -33,9 +31,15 @@ img {
    
 }
 
+.description{
+    font-size: 1em;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
 
 .value{
-     font-size: 100%;
+     font-size: 1.4em;
     
 }
 

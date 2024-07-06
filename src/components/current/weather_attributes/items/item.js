@@ -10,7 +10,7 @@ export default function Item(props){
           </div>
           <div className="text-container">
             <h2 className="value">{props.value}</h2>
-            <span className="value">{props.description}</span>
+            <span className="description">{props.description}</span>
           </div>
         </div>
     )
