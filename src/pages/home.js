@@ -1,6 +1,6 @@
 import Current from "../components/current/current";
-import Day from "../components/day/day";
-import History from "../components/history/history";
+import Hourly from "../components/hourly/hourly";
+import Daily from "../components/Daily/daily";
 import Map from "../components/map/map";
 import './home.css'
 
@@ -12,7 +12,7 @@ return(
 
 
         <div className="day-component">
-            <Day/>
+            <Hourly />
         </div>
            
         <div className="current-component">
@@ -25,7 +25,7 @@ return(
         </div>
 
         <div className="history-component">
-        <History/>
+        <Daily/>
         </div>
       
     </div>

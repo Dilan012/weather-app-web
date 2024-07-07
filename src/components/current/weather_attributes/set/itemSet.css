@@ -5,9 +5,8 @@
     flex-wrap: wrap;
     gap: 1%;
     height: 100%; 
-    width: 50%;
+    width: 100%;
     min-height: 90%;
-   
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     box-sizing: border-box;
@@ -22,9 +21,8 @@
     width: 30%; 
     /*background-color: rgb(75, 93, 121);*/
     background-color: #808080;
-    
     border-radius: 20%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  /*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);*/
     padding: 4px; /* Adjust padding to reduce overall size */
     box-sizing: border-box; /* Include padding and border in the height */
     overflow: hidden; /* Prevent overflow with hidden content */

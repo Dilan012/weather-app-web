@@ -1,14 +1,14 @@
-import './history.css'
+import './daily.css'
 
-function History(){
+function Daily(){
 
     return (
         <>
             <div className='history-back'>
-            <p>this is</p>
+            <p>this is daily</p>
             </div>
         </>
     );
 }
 
-export default History;
+export default Daily;

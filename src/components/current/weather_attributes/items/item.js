@@ -6,7 +6,7 @@ export default function Item(props){
     return(
         <div className="block">
           <div className="image-container-item">
-            <img src={props.img} alt="Weather Icon" />
+            <img src={props.img} alt="Weather Icon" className="attribute-icons"/>
           </div>
           <div className="text-container">
             <h2 className="value">{props.value}</h2>

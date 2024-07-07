@@ -1,0 +1,28 @@
+
+.hour-img{
+    width: 20px;
+    height: 20px;
+}
+.hour-img-container{
+    
+}
+
+.hour-text{
+
+}
+
+.hour-temp{
+
+}
+
+.hour-item{
+    width: 40%; 
+    /*background-color: rgb(75, 93, 121);*/
+    background-color: #808080;
+    border-radius: 20%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    padding: 4px; /* Adjust padding to reduce overall size */
+    box-sizing: border-box; 
+    margin: 1%; /* Adjust margin as needed */
+    min-width:80px;
+}
