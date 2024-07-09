@@ -45,4 +45,13 @@
     width: 34%;
 }
 
+.condition-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to two lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(15px, 2vw, 30px); /* Example: Adjust the range as needed */
+    
+}
 
