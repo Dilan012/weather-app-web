@@ -2,10 +2,10 @@ import './hour.css'
 
 export default function Hour({hour, img, temp}){
 
-
+   const backgroundColor = '#ffffff';
 
     return(
-        <div className='hour-item'>
+        <div id='con' className='hour-item' style={{backgroundColor}}>
             <div className="hour-text">
                 <h2>{hour}</h2>
             </div>

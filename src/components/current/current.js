@@ -2,8 +2,9 @@
 import './current.css'
 import ItemSet from './weather_attributes/set/itemSet';
 import sun from '../../assets/cloudy (1).png'
+import set_img from '../hourly/add_image';
 
-function Current({current:{wind_kph,pressure_mb, temp_c, humidity, feel, uv, feelslike_c, condition:{text}}, location:{name, region, localtime, country}}){
+function Current({current:{wind_kph,pressure_mb, temp_c, humidity, uv, feelslike_c, condition:{text}}, location:{name, region, localtime, country}}){
   
     const attribute = { wind_speed: wind_kph, 
                         pressure: pressure_mb,
@@ -11,7 +12,15 @@ function Current({current:{wind_kph,pressure_mb, temp_c, humidity, feel, uv, fee
                         humidity: humidity,
                         feel: feelslike_c,
                         uv: uv}
-    
+   
+   // set the image according to condition
+    const get_img= {
+        condition:{
+            text: text
+        }
+   }    
+  const data = set_img([get_img]);
+  
     return (
         <div className='grid-container-current'>
             <div className='item-set'>
@@ -19,7 +28,7 @@ function Current({current:{wind_kph,pressure_mb, temp_c, humidity, feel, uv, fee
             </div>
             
             <div className='weather-current'>
-                <MainWeather img={sun} localtime={localtime} condition={text} name={name} region={region} country={country}/>
+                <MainWeather img={data[0].img} localtime={localtime} condition={text} name={name} region={region} country={country}/>
             </div>
                 
         </div>

@@ -17,7 +17,7 @@ function Home(){
   const [error, setError] = useState(null);
 
   useEffect (()=>{
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=badulla&days=1&aqi=no&alerts=no`).then(
+    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=homagama&days=1&aqi=no&alerts=no`).then(
       response =>{
         setData(response.data)
         setLoading(false)
@@ -40,13 +40,14 @@ function Home(){
    const current = data.current
    const location = data.location
    
+   
 
 return(
     <div className="grid-container" >
 
 
-        <div className="day-component">
-            <Hourly hourly={hourly} />
+        <div className="hourly-component">
+            <Hourly hourly={hourly}/>
         </div>
            
         <div className="current-component">
@@ -58,7 +59,7 @@ return(
             <Map/>
         </div>
 
-        <div className="history-component">
+        <div className="daily-component">
         <Daily/>
         </div>
       

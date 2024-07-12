@@ -39,11 +39,11 @@ body{
     background-color: #707070;
 }
 
-.day-component{
+.hourly-component{
     
     width: 32%; 
     height: 45%; 
-    background-color: aqua;
+    background-color: #707070;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(143, 136, 136, 0.9);
     padding: 20px;
@@ -62,7 +62,7 @@ body{
     overflow: auto;
     transform: rotate(-2deg);
 }
-.history-component{
+.daily-component{
     width: 53%; 
     height:45%; 
     background-color: aqua;
@@ -80,14 +80,17 @@ body{
         width: 100%;
         height: auto;
     }
-    .day-component,
+    .hourly-component,
     .map-component,
-    .history-component {
+    .daily-component {
         width: 100%;
         height:auto;
         transform: rotate(0deg);
         
     }
+
+ 
+
     .grid-container{
         transform: none;
     }

@@ -20,7 +20,7 @@
 
 .hour-temp{
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.7em;
 }
 
 .hour-item{
@@ -35,4 +35,21 @@
     min-width:80px;
     
     
+}
+
+
+@media (max-width: 1500px) {
+    
+.hour-item{
+    width: 100px;
+    height: 100px; 
+    background-color: #ffffff;
+
+    padding: 4px; /* Adjust padding to reduce overall size */
+    
+    margin: 1%; /* Adjust margin as needed */
+    min-width:80px;
+    
+    
+}
 }
