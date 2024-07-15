@@ -6,6 +6,7 @@
     height: 100%;
     box-sizing: border-box;
     width: 100%;
+    
 }
 
 .item-set{
@@ -16,7 +17,20 @@
     width:  47%
 }
 
-
+.city-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to two lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.region-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limit to two lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* main weather css */
 
@@ -55,3 +69,34 @@
     
 }
 
+@media (max-width:750px){
+    .item-set{
+        width: 100%;
+        order: 2
+    }
+    .weather-current{
+        width: 100%;
+        order: 1;
+    }
+    .main-weather-block{
+        gap: 5%;
+    }
+    .main-weather-img-container,
+    .main-weather-value{
+        width: 100%;
+       
+    }
+    .condition-text{
+        font-size: 2em;
+    }
+    .grid-container-current{
+        display: flex;
+        flex-wrap: wrap;
+        gap:50px;
+        height: 100%;
+        box-sizing: border-box;
+        width: 100%;
+        
+
+    }
+}

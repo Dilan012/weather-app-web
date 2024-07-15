@@ -17,7 +17,7 @@ function Home(){
   const [error, setError] = useState(null);
 
   useEffect (()=>{
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=homagama&days=1&aqi=no&alerts=no`).then(
+    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=homagama&days=4&aqi=no&alerts=no`).then(
       response =>{
         setData(response.data)
         setLoading(false)
@@ -39,6 +39,9 @@ function Home(){
    const hourly = data.forecast.forecastday[0].hour;
    const current = data.current
    const location = data.location
+   const tomorrow = data.forecast.forecastday[1];
+   const dayAfter = data.forecast.forecastday[2]
+   
    
    
 
@@ -60,7 +63,7 @@ return(
         </div>
 
         <div className="daily-component">
-        <Daily/>
+        <Daily tomorrow={tomorrow} dayAfter={dayAfter}/>
         </div>
       
     </div>

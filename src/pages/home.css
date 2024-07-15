@@ -1,12 +1,8 @@
 body{
-    background-color: rgb(105, 40, 158);
+    background-color: #202020;
     overflow-x: hidden;
     box-sizing: border-box;
-    background-color: #404040;
-  
-  
 }
-
 .grid-container {
     display: flex; 
     flex-wrap: wrap; 
@@ -16,15 +12,8 @@ body{
     align-items: center; 
     padding: 1%;
     width: 99%;
-    box-sizing: border-box;
-    background-color: #404040;
-  
+    box-sizing: border-box;  
 }
-    
-   
-   
-    
-
 .current-component{
     width: 66%; 
     height: 45%; 
@@ -32,74 +21,72 @@ body{
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     padding: 20px;
-    box-sizing: border-box; /* Include padding and border in the height */ 
+    box-sizing: border-box;  
 }
-
 .current-component:hover{
     background-color: #707070;
 }
-
 .hourly-component{
-    
     width: 32%; 
     height: 45%; 
     background-color: #707070;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(143, 136, 136, 0.9);
     padding: 20px;
-    box-sizing: border-box; /* Include padding and border in the height */
+    box-sizing: border-box; 
     overflow: auto;
 }
 .map-component{
-    
     width: 44%; 
     height: 45%; 
     background-color: aqua;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     padding: 20px;
-    box-sizing: border-box; /* Include padding and border in the height */
+    box-sizing: border-box; 
     overflow: auto;
     transform: rotate(-2deg);
 }
 .daily-component{
     width: 53%; 
     height:45%; 
-    background-color: aqua;
+    background-color: #505050;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    box-sizing: border-box; /* Include padding and border in the height */
-    overflow: auto;
-   
-}
-    
+    padding: 10px;
+    box-sizing: border-box; 
+    overflow: hidden;
+} 
 @media (max-width: 1500px) {
     /* Adjust component widths for smaller screens */   
-    .current-component {
-        width: 100%;
-        height: auto;
-    }
+    .current-component,
     .hourly-component,
     .map-component,
     .daily-component {
         width: 100%;
         height:auto;
         transform: rotate(0deg);
+    }
+    .current-component{
+        order: 1;
+    }
+    .hourly-component{
+        order: 4;
         
     }
-
- 
-
+    .daily-component{
+        order: 2;
+    }
+    .map-component{
+        order: 3;
+    }
     .grid-container{
         transform: none;
     }
-   
- 
 }
 
 @media (min-width: 1800px) {   
-    
+
     .grid-container{
         transform: scale(0.8);
        

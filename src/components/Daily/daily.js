@@ -1,13 +1,19 @@
 import './daily.css'
+import Day from './day.js';
 
-function Daily(){
+function Daily({tomorrow, dayAfter}){
 
     return (
-        <>
-            <div className='history-back'>
-            <p>this is daily</p>
+        <div className='main-container'>
+            <div className='future'>
+                <Day data={tomorrow} name="Tomorrow"/>
             </div>
-        </>
+            <div className='future'>
+                <Day data={dayAfter} name="Day After"/>
+            </div>    
+                
+        </div>
+    
     );
 }
 

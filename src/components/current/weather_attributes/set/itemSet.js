@@ -7,6 +7,14 @@ import uv_img from "../../../../assets/uv.png"
 import wind_img from "../../../../assets/wind.png"
 import Item from '../items/item';
 
+
+/* this componet create the set of current weather attributes 
+in the current weather page such as humudity, temperature, uv 
+and so on. this is a grid view created with css flex box 
+ */
+
+
+
 export default function ItemSet({attribute: {pressure, wind_speed, temp, humidity, feel, uv}}){
    
 
