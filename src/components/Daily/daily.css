@@ -1,7 +1,7 @@
 .main-container{
 
     display: flex;
-    flex-wrap: wrap;
+    
     gap: 3%;
     width: 100%;
     overflow: hidden;
@@ -11,8 +11,35 @@
 }
 .future{
     width: 35%;
+    animation-duration: 3s;
+    animation-name: loading-item;
 }
-
+@keyframes loading-item {
+    from{
+        transform: translate(20vw, 0);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
+.new-day{
+    width: 30%;
+    animation-duration: 5s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+@keyframes slidein {
+    from {
+      translate: 100% 0; 
+    }
+    50%{
+      translate: 0 0;  
+    }
+    100% {
+      translate: 0 45vh;
+    }
+  }
 @media (max-width:750px){
     .future{
         width: 100%;
@@ -23,4 +50,16 @@
         gap: 20px;
     }
 
+}
+
+@media (max-width:750px){
+    .new-day{
+        display: none;
+    }
+    .future{
+        width: 100%;
+    }
+    .main-container{
+        flex-wrap: wrap;
+    }
 }

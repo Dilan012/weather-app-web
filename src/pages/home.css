@@ -1,5 +1,5 @@
 body{
-    background-color: #202020;
+    background-image: url('../assets/weather_img/b.jpg');
     overflow-x: hidden;
     box-sizing: border-box;
 }
@@ -17,15 +17,29 @@ body{
 .current-component{
     width: 66%; 
     height: 45%; 
-    background-color: #606060;
+    background-color: rgba(60,60,60,0.5);
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     padding: 20px;
     box-sizing: border-box;  
+    animation-duration: 3s;
+    animation-name: item-down;
 }
 .current-component:hover{
-    background-color: #707070;
+    background-color: rgba(70,70,70,0.5);
 }
+
+@keyframes item-down {
+    from{
+        transform: translate(0,-20vh);
+        background-color: #202020;
+    }
+    to{
+        transform: translate(0, 0);
+        background-color: #606060;
+    }
+}
+
 .hourly-component{
     width: 32%; 
     height: 45%; 
@@ -50,7 +64,7 @@ body{
 .daily-component{
     width: 53%; 
     height:45%; 
-    background-color: #505050;
+    background-color: rgba(50, 50, 50, 0.5);
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     padding: 10px;
@@ -66,6 +80,10 @@ body{
         width: 100%;
         height:auto;
         transform: rotate(0deg);
+    }
+    body{
+        background-image: url('../assets/weather_img/b.jpg');
+
     }
     .current-component{
         order: 1;

@@ -17,7 +17,7 @@ function Home(){
   const [error, setError] = useState(null);
 
   useEffect (()=>{
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=homagama&days=4&aqi=no&alerts=no`).then(
+    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=dubai&days=4&aqi=no&alerts=no`).then(
       response =>{
         setData(response.data)
         setLoading(false)
