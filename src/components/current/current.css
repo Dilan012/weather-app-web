@@ -6,19 +6,25 @@
     height: 100%;
     box-sizing: border-box;
     width: 100%;
+    max-height: 100%;
     
 }
 
 .item-set{
     width:50%;
+    max-height: 100%;
    
 }
 
-
+.time-text{
+    color: #ffffff;
+}
 
 .weather-current{
-    width:  47%
+    width:  47%;
+   
 }
+
 
 .city-text{
     display: -webkit-box;
@@ -26,6 +32,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #ffffff;
 }
 .region-text{
     display: -webkit-box;
@@ -33,6 +40,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    color:bisque;
 }
 
 /* main weather css */
@@ -68,14 +76,16 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: clamp(15px, 2vw, 30px); /* Example: Adjust the range as needed */
+    font-size: clamp(15px, 2vw, 30px); 
+    color: #ffffff;
     
 }
 
 @media (max-width:750px){
     .item-set{
         width: 100%;
-        order: 2
+        order: 2;
+        overflow-x: scroll;
     }
     .weather-current{
         width: 100%;

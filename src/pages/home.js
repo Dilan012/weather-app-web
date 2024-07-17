@@ -2,6 +2,7 @@ import Current from "../components/current/current";
 import Hourly from "../components/hourly/hourly";
 import Daily from "../components/Daily/daily";
 import Map from "../components/map/map";
+import b from '../assets/weather_img/f.jpeg'
 import './home.css'
 
 import { useEffect, useState } from 'react';
@@ -15,9 +16,11 @@ function Home(){
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null);
+  const [bgImage, setBgImage] = useState(null);
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect (()=>{
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=dubai&days=4&aqi=no&alerts=no`).then(
+    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=homagama&days=4&aqi=no&alerts=no`).then(
       response =>{
         setData(response.data)
         setLoading(false)
@@ -28,7 +31,30 @@ function Home(){
     })
   },[])
 
-  if (loading) {
+ /* 
+  useEffect(() => {
+    const img = new Image();
+    img.src = b;
+    img.onload = () => {
+      setBgImage(img.src);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (bgImage) {
+      document.body.style.backgroundImage = `url(${bgImage})`;
+     
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundPosition = 'center';
+      setImgLoaded(true)
+    }
+    return () => {
+      document.body.style.backgroundImage = null;
+    };
+  }, [bgImage]);*/
+
+
+  if (loading /*|| !imgLoaded*/) {
     return <p>Loading...</p>;
   }
 
@@ -42,10 +68,10 @@ function Home(){
    const tomorrow = data.forecast.forecastday[1];
    const dayAfter = data.forecast.forecastday[2]
    
-   
-   
 
 return(
+  <>
+ 
     <div className="grid-container" >
 
 
@@ -67,6 +93,7 @@ return(
         </div>
       
     </div>
+    </>
 )
 }
 

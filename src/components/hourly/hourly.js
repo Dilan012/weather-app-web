@@ -11,7 +11,7 @@ function Hourly({hourly}){
    
    return (
     <div className='hourly-background'>
-      <h1>test</h1>
+      <h1 style={{color:"#ffffff"}}>Today In Homagama</h1>
         <div className='hourly-display'>
       {data.map((data, index) => {
           const timeString = data.time;

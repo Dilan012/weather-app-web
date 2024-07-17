@@ -23,6 +23,9 @@ function set_img(data){
         case("Clear "):
             data.img = clear;
             break;
+        case("Clear"):
+            data.img = clear;
+            break;
         case ("Sunny"):
             data.img = sun;
             break;

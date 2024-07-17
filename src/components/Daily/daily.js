@@ -6,7 +6,7 @@ import Attribute from './attribute.js';
 function Daily({tomorrow, dayAfter}){
 
     return (
-        <div className='main-container'>
+        <div className='main-container-daily'>
             <div className='future'>
                 <Day data={tomorrow} name="Tomorrow"/>
             </div>

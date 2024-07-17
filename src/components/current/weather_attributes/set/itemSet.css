@@ -32,22 +32,26 @@
 
 @media (max-width: 1500px) {
     .item {
-        width: 45%; /* Adjust width for smaller screens */
-        height: auto;
+        width: 150px; /* Adjust width for smaller screens */
+        height: 150px;
+        
         
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
     .item {
-        width: 45%; /* Stack items vertically on smaller screens */
-        margin: 2% /* Adjust margins for stacking */
+        width: 150px;
+        height: 150px;
+        margin: 5px 
         
         
     }
 
     .grid-container-itemset{
-        width: 100%;
+        width: 1000px;
+        flex-wrap: nowrap;
+        
     }
 }
 

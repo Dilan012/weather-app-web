@@ -1,5 +1,5 @@
 .hourly-backgorund {
-    background-color: #707070;
+   
    
 }
 
@@ -13,6 +13,20 @@
     padding: 1%;
     width: 99%;
     box-sizing: border-box;
-    
 }
+
+@media (max-width:1500px){
+    .hourly-display{
+        flex-wrap: nowrap;
+        align-items: unset;
+        justify-content: unset;
+        
+    }
+    .hourly-backgorund{
+        padding: 10px;
+    }
+}
+
+
+
 

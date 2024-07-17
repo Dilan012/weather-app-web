@@ -53,3 +53,9 @@
     overflow: hidden;
    
 }
+
+@media(max-width:1500px){
+    .day-container{
+        overflow: auto;
+    }
+}

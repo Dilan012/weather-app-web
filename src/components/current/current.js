@@ -53,7 +53,7 @@ const MainWeather = ({condition, img, localtime, name, region, country}) =>{
             
             <div className='main-weather-value'>
                 <h1 className='condition-text'>{condition}</h1>
-                <h3>{time}</h3><br/>
+                <h3 className='time-text'>{time}</h3><br/>
                 <h2 className='city-text'>
                     {name}
                 </h2>

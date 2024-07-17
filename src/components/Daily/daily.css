@@ -1,7 +1,6 @@
-.main-container{
-
+.main-container-daily{
+    width: 100%;
     display: flex;
-    
     gap: 3%;
     width: 100%;
     overflow: hidden;
@@ -14,6 +13,7 @@
     animation-duration: 3s;
     animation-name: loading-item;
 }
+
 @keyframes loading-item {
     from{
         transform: translate(20vw, 0);
@@ -41,25 +41,22 @@
     }
   }
 @media (max-width:750px){
-    .future{
-        width: 100%;
     
-    }
 
     .main-container{
         gap: 20px;
     }
 
-}
 
-@media (max-width:750px){
     .new-day{
         display: none;
     }
     .future{
         width: 100%;
+        height: auto;
     }
-    .main-container{
-        flex-wrap: wrap;
+    .main-container-daily{
+        flex-wrap: nowrap;
+        width: 180%;
     }
 }
