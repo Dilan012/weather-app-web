@@ -4,9 +4,10 @@ import Daily from "../components/Daily/daily";
 import MapView from "../components/map/map";
 import b from '../assets/webBack.jpg'
 import './home.css'
-
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import navbar from "../components/navbar";
+import Navbar from "../components/navbar";
 
 const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
@@ -72,7 +73,7 @@ function Home(){
 
 return(
   <>
-    <div style={{backgroundColor: "#ffffff"}}><h1>this is the header</h1></div>
+    <div  className='nav-background'><Navbar/></div>
     <div className="grid-container" >
 
 

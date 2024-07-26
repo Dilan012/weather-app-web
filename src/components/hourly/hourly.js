@@ -21,7 +21,7 @@ function Hourly({hourly , time, location}){
           const timeParts = timeString.split(' '); // Split the string at the space
           const time = timeParts[1]; 
 
-          if(timeParts[1].split(":")[0]==hour){
+          if(parseInt(timeParts[1].split(":")[0])==parseInt(hour)){
              h_status = 1
           }else{h_status = 0}
 

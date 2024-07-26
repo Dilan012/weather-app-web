@@ -3,7 +3,21 @@ body{
     overflow-x: hidden;
     box-sizing: border-box;
     background-color: #101010;
+    margin: 0;
+   
 }
+
+.nav-background{
+    background-color: rgba(50,50,50,0.3);
+    width: 100%;
+    padding-left: 4%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    box-sizing: border-box;
+}
+
 
 .grid-container {
     display: flex; 
@@ -17,6 +31,7 @@ body{
     box-sizing: border-box;  
     max-width: 2000px;
     max-height: 1000px;
+    
 }
 .current-component{
     width: 66%; 
@@ -64,8 +79,7 @@ body{
     
 }
 .hourly-component::before {
-    content: '';
-    position:;
+   
     top: 10%;
     left: 10%;
     width: 200px;
@@ -113,6 +127,8 @@ body{
     max-width: unset;
     max-height: unset;
     }
+
+    
 }
 @media (max-width: 1500px) {
     /* Adjust component widths for smaller screens */   
