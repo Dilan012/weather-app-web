@@ -12,6 +12,7 @@
     padding: 5%;
     box-sizing: border-box;
     max-width: 60px;
+    filter: invert(100%) brightness(1000%);
     
 }
 .value-text-day{

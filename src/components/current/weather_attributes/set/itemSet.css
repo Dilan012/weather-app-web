@@ -28,6 +28,8 @@
     overflow: hidden; /* Prevent overflow with hidden content */
     margin: 1%; /* Adjust margin as needed */
     min-width:80px;
+    max-width:200px;
+    max-height: 200px;
 }
 
 @media (max-width: 1500px) {

@@ -1,14 +1,67 @@
-import './map.css'
 
-function Map(){
+function MapView() {
+ 
 
-    return (
-        <>
-            <div className='history-back'>
-            <p>this is map</p>
-            </div>
-        </>
-    );
+  return (
+    <div className="map-container">
+      <h1>gkfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverhfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverhfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverhfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverhfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverhfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverhfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverhfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverhfdnhshg
+        tvrhgcrh
+        vryverh
+        erhvr
+        hver
+        hverhevrhh
+        vrverh
+      </h1>
+    </div>
+  );
 }
 
-export default Map;
+export default MapView;

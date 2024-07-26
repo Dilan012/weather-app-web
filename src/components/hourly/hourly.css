@@ -1,7 +1,7 @@
 .hourly-backgorund {
    
-   
 }
+
 
 .hourly-display{
     display: flex;
@@ -13,6 +13,11 @@
     padding: 1%;
     width: 99%;
     box-sizing: border-box;
+    max-height: 300px;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+   
 }
 
 @media (max-width:1500px){
@@ -20,6 +25,7 @@
         flex-wrap: nowrap;
         align-items: unset;
         justify-content: unset;
+        overflow-x: scroll;
         
     }
     .hourly-backgorund{

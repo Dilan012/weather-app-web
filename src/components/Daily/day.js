@@ -17,7 +17,7 @@ function Day({data, name}){
     return(
         <div className="day-container">
             <div className='title-container-day'>
-                <h1 style={{fontSize:"120% ",fontFamily:"", fontWeight:'900 ', textAlign:"center"}}>
+                <h1 style={{fontSize:"120% ",fontFamily:"", fontWeight:'900 ', textAlign:"center", color:'#ffffff', fontStyle:'italic'}}>
                     {name}
                     </h1>
             </div>

@@ -1,8 +1,8 @@
 import Current from "../components/current/current";
 import Hourly from "../components/hourly/hourly";
 import Daily from "../components/Daily/daily";
-import Map from "../components/map/map";
-import b from '../assets/weather_img/f.jpeg'
+import MapView from "../components/map/map";
+import b from '../assets/webBack.jpg'
 import './home.css'
 
 import { useEffect, useState } from 'react';
@@ -31,7 +31,7 @@ function Home(){
     })
   },[])
 
- /* 
+
   useEffect(() => {
     const img = new Image();
     img.src = b;
@@ -45,16 +45,16 @@ function Home(){
       document.body.style.backgroundImage = `url(${bgImage})`;
      
       document.body.style.backgroundSize = 'cover';
-      document.body.style.backgroundPosition = 'center';
+      document.body.style.backgroundPosition = 'center'; 
       setImgLoaded(true)
     }
     return () => {
       document.body.style.backgroundImage = null;
     };
-  }, [bgImage]);*/
+  }, [bgImage]);
 
 
-  if (loading /*|| !imgLoaded*/) {
+  if (loading || !imgLoaded) {
     return <p>Loading...</p>;
   }
 
@@ -63,20 +63,21 @@ function Home(){
   }
   
    const hourly = data.forecast.forecastday[0].hour;
-   const current = data.current
+   const current = data.current;
    const location = data.location
-   const tomorrow = data.forecast.forecastday[1];
+   const tomorrow = data.forecast.forecastday[1]
    const dayAfter = data.forecast.forecastday[2]
+   const time = data.location.localtime.split(" ")
    
 
 return(
   <>
- 
+    <div style={{backgroundColor: "#ffffff"}}><h1>this is the header</h1></div>
     <div className="grid-container" >
 
 
         <div className="hourly-component">
-            <Hourly hourly={hourly}/>
+            <Hourly hourly={hourly} time={time} location= {location}/>
         </div>
            
         <div className="current-component">
@@ -85,7 +86,7 @@ return(
 
         
         <div className="map-component">
-            <Map/>
+            <MapView/>
         </div>
 
         <div className="daily-component">

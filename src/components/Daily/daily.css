@@ -58,5 +58,6 @@
     .main-container-daily{
         flex-wrap: nowrap;
         width: 180%;
+        
     }
 }

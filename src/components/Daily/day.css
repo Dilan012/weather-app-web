@@ -32,12 +32,16 @@
     text-overflow: ellipsis;
     font-size:100%;
     font-weight: bold;
+        
+   
 }
 .condition-container{
     width: 100%;
     text-align: center;
     box-sizing: border-box;
-    padding: 4%;   
+    padding: 4%;
+    color: aliceblue;
+      
 }
 .condition-day{
     padding: 2%;
