@@ -6,11 +6,10 @@ import b from '../assets/webBack.jpg'
 import './home.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import navbar from "../components/navbar";
+
 import Navbar from "../components/navbar";
-
+ 
 const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-
 function Home(){
 
     
@@ -19,9 +18,18 @@ function Home(){
   const [error, setError] = useState(null);
   const [bgImage, setBgImage] = useState(null);
   const [imgLoaded, setImgLoaded] = useState(false);
+  const [geolocation, setGeolocation] = useState({ latitude: 6.916983, longitude:  79.861058 });
+
+  useEffect(()=>{
+        if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition((position)=>{
+          setGeolocation({ latitude: position.coords.latitude, longitude: position.coords.longitude });
+        })
+      }
+    },[])
 
   useEffect (()=>{
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=homagama&days=4&aqi=no&alerts=no`).then(
+    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${geolocation.latitude},${geolocation.longitude}&days=4&aqi=no&alerts=no`).then(
       response =>{
         setData(response.data)
         setLoading(false)
@@ -30,7 +38,7 @@ function Home(){
       setError(err)
       setLoading(false)
     })
-  },[])
+  },[geolocation])
 
 
   useEffect(() => {
@@ -70,12 +78,14 @@ function Home(){
    const dayAfter = data.forecast.forecastday[2]
    const time = data.location.localtime.split(" ")
    
-
+  const handle = function(data){
+    setGeolocation(data)
+  }
 return(
   <>
     <div  className='nav-background'><Navbar/></div>
     <div className="grid-container" >
-
+   
 
         <div className="hourly-component">
             <Hourly hourly={hourly} time={time} location= {location}/>
@@ -87,7 +97,7 @@ return(
 
         
         <div className="map-component">
-            <MapView/>
+            <MapView geolocation={geolocation} handle={handle}/>
         </div>
 
         <div className="daily-component">

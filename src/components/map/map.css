@@ -1,7 +1,9 @@
-.history-back {
-    background-color: rgb(33, 51, 90);
+.map-container{
+    width: 100%;
+    height: 100%;
 }
 
-.history-back:hover{
-    background-color: rgb(70, 99, 99);
+.g-map{
+    width: 100%; 
+    height: 100%;
 }
