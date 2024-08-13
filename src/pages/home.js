@@ -2,7 +2,7 @@ import Current from "../components/current/current";
 import Hourly from "../components/hourly/hourly";
 import Daily from "../components/Daily/daily";
 import MapView from "../components/map/map";
-import b from '../assets/webBack.jpg'
+import b from '../assets/weather_img/background.jpg'
 import './home.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -29,7 +29,7 @@ function Home(){
     },[])
 
   useEffect (()=>{
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${geolocation.latitude},${geolocation.longitude}&days=4&aqi=no&alerts=no`).then(
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${geolocation.latitude},${geolocation.longitude}&days=4&aqi=no&alerts=no`).then(
       response =>{
         setData(response.data)
         setLoading(false)

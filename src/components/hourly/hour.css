@@ -17,11 +17,14 @@
 .hour-text{
     text-align: center;
     font-size: 60%;
+    color: #ffffff;
 }
 
 .hour-temp{
     text-align: center;
     font-size: 60%;
+    color: #ffffff;
+
 }
 
 .hour-item{

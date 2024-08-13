@@ -2,7 +2,7 @@ import './hour.css'
 
 export default function Hour({hour, img, temp, status}){
 
-   const backgroundColor =  status==1 ? '#ffffff':'#808080';
+   const backgroundColor =  status==1 ? '#509050':'#606060';
 
     return(
         <div id='con' className='hour-item' style={{backgroundColor}}>

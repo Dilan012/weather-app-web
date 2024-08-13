@@ -9,7 +9,7 @@
     height: 100%;
 }
 .future{
-    width: 35%;
+    width:35%;
     animation-duration: 3s;
     animation-name: loading-item;
 }
