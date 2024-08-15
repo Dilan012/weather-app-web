@@ -1,6 +1,6 @@
 # Weather application 
 
-![screenshot](screenshot.png)
+![screenshot](Screenshot.png)
 
 A weather application created with react, weather api, google map api, google map place api. it provides real time weather information of your location and any location selected on the map. application provides weather attributes (wind, temperature, humidity, uv index,pressure) of current weather and hourly weather information and weather forecast upto three days.
 
