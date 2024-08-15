@@ -32,7 +32,7 @@
     max-height: 200px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1800px) {
     .item {
         width: 150px; /* Adjust width for smaller screens */
         height: 150px;
